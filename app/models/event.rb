@@ -1,5 +1,4 @@
 class Event < ApplicationRecord
-
-  validates :name ,uniqueness: true, presence: true
-  validates :date ,uniqueness: true, presence: true
+  validates :name, presence: true
+  validates :date, presence: true
 end
