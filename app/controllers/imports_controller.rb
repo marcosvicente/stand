@@ -1,9 +1,7 @@
 class ImportsController < ApplicationController
-
   
   def create
     @import  = Import.new(import_params)
-
     if @import.save
       render :json => @import, :status => :ok
     else
@@ -13,6 +11,6 @@ class ImportsController < ApplicationController
 
   private 
   def import_params
-    params.require(:dog).permit(:name, :date, :file)
+    params.require(:import).permit(:file)
   end
 end

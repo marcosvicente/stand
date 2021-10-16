@@ -3,7 +3,6 @@ class CreateEvents < ActiveRecord::Migration[6.1]
     create_table :events do |t|
       t.string :name
       t.date :date
-      t.string :file
 
       t.timestamps
     end
