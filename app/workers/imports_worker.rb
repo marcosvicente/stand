@@ -58,7 +58,7 @@ class ImportsWorker
   end
 
   def save_current_row(row)
-    @import.current_row = row
+    @import.current_row = row + 1
     @import.save(validate: false)
   end
 end
