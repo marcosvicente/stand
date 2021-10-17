@@ -43,7 +43,7 @@ class ImportsWorker
   end
 
   def save_row(name, date)
-    event = Event.new(
+    event = Event.find_or_create_by(
       name: name,
       date: date
     )

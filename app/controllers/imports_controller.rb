@@ -1,5 +1,9 @@
 class ImportsController < ApplicationController
-  
+  def index
+    @imports = Import.order(:created_at)
+    render :json => @imports, :status => :ok
+  end
+
   def create
     @import  = Import.new(import_params)
     if @import.save
