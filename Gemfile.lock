@@ -83,6 +83,8 @@ GEM
     foreman (0.87.2)
     globalid (0.5.2)
       activesupport (>= 5.0)
+    human_enum_name (0.1.0)
+      activesupport (>= 4.2.0)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.1)
@@ -196,6 +198,7 @@ DEPENDENCIES
   byebug
   carrierwave (~> 2.0)
   foreman
+  human_enum_name (~> 0.1.0)
   kaminari
   listen (~> 3.3)
   pg (~> 1.1)

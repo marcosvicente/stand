@@ -30,22 +30,22 @@ class ImportsWorker
     save_total_row(row.size)
 
     row.each_with_index do |value, index|
-      date = value.delete("^0-9")
+      time = value.delete("^0-9")
 
-      if date.blank? and value.include? "lightning"
-        date = 5
+      if time.blank? and value.include? "lightning"
+        time = 5
       end 
 
-      save_row(value, date)
+      save_row(value, time)
       save_current_row(index)
     end
     
   end
 
-  def save_row(name, date)
+  def save_row(name, time)
     event = Event.find_or_create_by(
       name: name,
-      date: date
+      time: time
     )
     unless event.save
       raise "Event not be save error: #{ event.errors.full_messages}"

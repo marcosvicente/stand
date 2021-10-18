@@ -1,0 +1,8 @@
+pt-BR:
+  activerecord:
+    attributes:
+      import:
+        statuses:
+          enqueued: Enfileirado
+          processing: Processando
+          done: Finalizado

@@ -1,6 +1,6 @@
 class ImportsController < ApplicationController
   def index
-    @imports = Import.order(:created_at)
+    @imports = Import.order("created_at DESC")
     render :json => @imports, :status => :ok
   end
 

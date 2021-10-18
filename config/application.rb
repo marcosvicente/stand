@@ -37,5 +37,7 @@ module Stand
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
     config.active_job.queue_adapter = :sidekiq
+    config.i18n.default_locale = :"pt-BR"
+
   end
 end
