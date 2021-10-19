@@ -9,7 +9,7 @@ class EventsController < ApplicationController
       if (aux_hour.hour == 12) 
         # add lunch
         lunch  = Event.new
-        lunch.hour = aux_hour.hour
+        lunch.hour = aux_hour
         lunch.name = "Almoço"
         lunch.time = 60
         
