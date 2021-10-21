@@ -19,8 +19,8 @@ class EventsController < ApplicationController
 
         event.hour = aux_hour
         track << event
-        aux_hour = aux_hour.change(hour: aux_hour.hour, min: event.time)
-      elsif (aux_hour.hour == 17 || aux_hour.hour == 16)
+        aux_hour += (event.time * 60)
+      elsif (aux_hour.hour == 16 or aux_hour.hour == 17)
         hapy_hour  = Event.new
         hapy_hour.hour = aux_hour
         hapy_hour.name = "Evento Network"

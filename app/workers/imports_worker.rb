@@ -34,6 +34,9 @@ class ImportsWorker
 
       if time.blank? and value.include? "lightning"
         time = 5
+        value = value.delete_suffix("lightning")
+      else
+        value = value.gsub!(/(\d+|(min))/,"")
       end 
 
       save_row(value, time)
